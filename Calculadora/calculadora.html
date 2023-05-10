@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Calculadora/style.css">
+  <link rel="stylesheet" href="../Calculadora/formulario-style.css">
+  <title>Simulador Albion</title>
+</head>
+<!-- <body> -->
+
+<div class="header">
+  <div class="container">
+    <ul class="navBar">
+      <li><a href="../Home/fungi.html">Home</a></li>
+      <li><a href="../Calculadora/calculadora.html"><b>Simulador</b></a></li>
+
+      <li><a href="../Login/login.html">Login</a></li>
+      <li><a href="../Cadastro/cadastro.html">Cadastro</a></li>
+      <li><a href="../duvida/duvida.html">Fale Conosco</a></li>
+    </ul>
+    <h1 class="titulo"><img src="../Home/logo.png"></h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="container">
+    <div class="caixa_formulario">
+      <h1>Calculadora Financeira</h1>
+      <div class="formulario">
+        <span>Qual o valor que é comprado a <b>UNIDADE</b> da semente ?</span><br> <input id="input_valor_semente"> <br>
+        <span>Qual o valor da <b>UNIDADE</b> do trigo no mercado ?</span> <br><input id="input_valor_trigo"><br>
+        <span>Quantas fazendas possui ?</span><br> <input id="input_quantidade_fazenda"> <br>
+        <span>Qual o retorno de trigo em <b>TODAS</b> as fazendas ?</span><br> <input id="input_retorno_trigo"> <br>
+        <span>Quantas sementes são retornadas ?</span><br>
+        <input id="input_retorno_de_sementes"><br>
+        <button onclick="lucro()">Ver Lucro</button><br><br>
+        <div></div>
+        <span id="div_resultado" style="margin-bottom: 30px;color: rgb(163, 35, 13);align-items: center;"></span>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+  function lucro() {
+    var valorSemente = Number(input_valor_semente.value)
+    var quantidadeFazenda = Number(input_quantidade_fazenda.value)
+    var valorTrigo = Number(input_valor_trigo.value)
+    var quantidadeTrigo = Number(input_retorno_trigo.value)
+    var custoPlantação = Number(valorSemente * (quantidadeFazenda * 9))
+    var retornoSemente = Number(input_retorno_de_sementes.value)
+    var lucroBruto = Number(quantidadeTrigo * valorTrigo + (retornoSemente * valorSemente))
+    var lucroLiquido = Number(lucroBruto - custoPlantação)
+    div_resultado.innerHTML = `<h3>O seu custo de plantação é ${custoPlantação}, seu retorno de semente é ${retornoSemente}, tendo assim um lucro bruto de ${lucroBruto}, e um lucro liquido de ${lucroLiquido}</h3>`
+  }
+
+</script>
