@@ -8,7 +8,8 @@
     opacity: 100%;
     width: 500px;
     height: 400px;
-    color: green;
+    color:rgb(165, 39, 39);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +19,8 @@
 
 .caixa_formulario h1 {
     font-size: 30px;
-    color: green;
+    color:rgb(165, 39, 39);
+
     flex-direction: center;
     justify-content: center;
 }
@@ -37,7 +39,8 @@
 
 .formulario button {
     margin-top: 10px;
-    background: green;
+    background:rgb(165, 39, 39);
+
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -112,4 +115,9 @@
 .contatoPai {
     display: flex;
     height: 100px;
+}
+.trigo{
+    height: 70px;
+    display: flex;
+    
 }
