@@ -6,6 +6,7 @@ body {
     background: url(../background_1.jpg);
     background-size: cover;
     margin: 1;
+    margin-top: 0px;
 }   
 
 .header {
@@ -17,10 +18,11 @@ body {
 
 .container {
     display: flex;
-    width: 100%;
+    width: auto;
     margin:0;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    
 }
 
 .header img {
