@@ -1,17 +1,17 @@
-*{
+/* *{
     font-family: 'Segoe UI';
-}
+} */
 
 body {
     background: url(../background_1.jpg);
     background-size: cover;
-    margin: 1;
+    margin: 0;
 }
 
 .header {
     width: 100%;
     background-color: rgb(165, 39, 39);
-    border-bottom: 5px solid #0a0000;
+    /* border-bottom: 5px solid #0a0000; */
     height: 70px;
 }
 
