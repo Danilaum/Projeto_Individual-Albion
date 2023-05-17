@@ -28,7 +28,7 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AquaTech</h1>
+            <h1 class="titulo"><img class="img_albion" src="../Home/logo.png"></h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -36,7 +36,7 @@
 
             <div class="btn-nav-white">
                 <a href="./cards.html">
-                    <h3>Aquários</h3>
+                    <h3>Fazendas</h3>
                 </a>
             </div>
 
@@ -61,10 +61,10 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Aquario 4</button>
+                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1"> Fazenda 1</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Fazenda 2</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Fazenda 3</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Fazenda</button>
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
@@ -75,7 +75,7 @@
                         <canvas id="myChartCanvas1"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura1" style="color: white"></p>
+                        <p id="avisoCaptura1" style="color: rgb(165, 39, 39)"></p>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                         <canvas id="myChartCanvas2"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura2" style="color: white"></p>
+                        <p id="avisoCaptura2" style="color: rgb(165, 39, 39)"></p>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
                         <canvas id="myChartCanvas3"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura3" style="color: white"></p>
+                        <p id="avisoCaptura3" style="color: rgb(165, 39, 39)"></p>
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@
                         <canvas id="myChartCanvas4"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura4" style="color: white"></p>
+                        <p id="avisoCaptura4" style="color: rgb(165, 39, 39)"></p>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "<span style='color:rgb(165, 39, 39)'>Últimas medidas de Temperatura e Umidade do Fazenda " + idAquario + "</span>"
     }
 
     function exibirAquario(idAquario) {
@@ -227,7 +227,7 @@
                 label: 'Umidade',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: 'rgb(255, 123, 0)',
                 tension: 0.1
             },
             {

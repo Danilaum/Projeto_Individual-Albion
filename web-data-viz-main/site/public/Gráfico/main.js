@@ -51,10 +51,10 @@ const serial = async (
         valoresLm35Temperatura.push(lm35Temperatura);
         valoresChave.push(chave);
 
-        if (HABILITAR_OPERACAO_INSERIR) {
-            await poolBancoDados.execute(
-                'insert into medida (dht11_umidade,dht11_temperatura, momento, fk_aquario) values (?,?,now(),?',
-                [dht11Umidade, dht11Temperatura, momento, fk_aquario]
+            if (HABILITAR_OPERACAO_INSERIR) {
+                await poolBancoDados.execute(
+                    'insert into medida (dht11_umidade,dht11_temperatura, momento, fk_aquario) values (?,?,now(),?',
+                    [dht11Umidade, dht11Temperatura, momento, fk_aquario]
             );
         }
 

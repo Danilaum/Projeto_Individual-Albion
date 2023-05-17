@@ -2,9 +2,13 @@
 
 *,
 body {
-  font-family: "Exo 2", sans-serif;
+  /* font-family: "Exo 2", sans-serif;*/
+  margin: 0; 
 }
-
+.img_albion{
+  width: 90px;
+  
+}
 .label-captura {
   display: flex;
   justify-content: center;
@@ -13,15 +17,17 @@ body {
 .dash-right .avisos {
   width: 100%;
   /* border: 3px solid pink; */
-  color: rgb(216, 216, 216);
-  font-family: "Exo 2", sans-serif;
+  color: rgb(0, 0, 0);
+  /* font-family: "Exo 2", sans-serif; */
 }
 
 .dash-right .avisos .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+   border-radius: 5px rgb(165, 39, 39)
 }
+
 
 .dash-right .avisos .container .div-form {
   width: 100%;
@@ -33,19 +39,20 @@ body {
 
 .dash-right .avisos .div-form label {
   width: 100%;
+  
 }
 
 .dash-right .avisos .div-form input {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 5px rgb(165, 39, 39)
 }
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
-  /* color: #E6005A; */
-  border: 3px solid #e6005a;
-  background-color: white;
+  border: 3px solid rgb(165, 39, 39);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  
 }
 
 .dash-right .avisos .div-form button {
@@ -57,7 +64,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: rgb(165, 39, 39);
   width: 120px;
 }
 
@@ -70,7 +77,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #ff0000;
   width: 80px;
 }
 
@@ -81,7 +88,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid rgb(255, 123, 0);
   padding: 20px;
 }
 
@@ -90,13 +97,24 @@ body {
 }
 
 .div-results {
-  width: 100%;
+  width: 300px;
+background-color: rgb(165, 39, 39);
+  flex-direction: column;
+  /* height: 100px; */
+  
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  /* color:rgb(165, 39, 39); */
+  background-color: rgb(165, 39, 39);
   border-radius: 5px;
   margin-bottom: 80px;
+  width:auto ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  flex-direction: column;
 }
 
 .div-buttons {
@@ -111,33 +129,51 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #0707f8;
+}
+.header-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+    height: 110px;
+  width: 100%;
+  background-color:rgb(165, 39, 39);
 }
 
 .dash {
-  width: 80%;
-  position: relative;
-  top: 0;
-  left: 20%;
-  background-color: #161618;
-  height: 100vh;
-  overflow: auto;
+  width: 90%;
+  /* position: center; */
+  /* top: 0; */
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #ffffff86;
+  height: auto;
+  /* overflow: auto; */
+  align-items: center;
+  
 }
 
 .regua {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width:auto;
   margin-top: 30px;
+  height: auto;
 }
 
 .perigo-frio {
   background-color: #5c6bc0;
+  display: auto;
+  width: 1000px;
+  height: 100px;
+  flex-direction: row-reverse;
 }
 
 .perigo-quente {
   background-color: #ff7043;
+  width: 100;
 }
 
 .alerta-frio {
@@ -154,7 +190,6 @@ body {
 
 .item-regua {
   padding: 5px;
-  width: 15%;
   margin: 5px;
   text-align: center;
   padding-top: 15px;
@@ -218,6 +253,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  direction: s;
 }
 
 .graph {
@@ -238,7 +274,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
+  color: #e64900;
   background-color: white;
   margin: 5px;
   border-radius: 3px;
@@ -246,11 +282,11 @@ body {
 
 .btn-pink {
   color: white;
-  background-color: #e6005a;
+  background-color: rgb(165, 39, 39)
 }
 
 .btn-white {
-  color: #e6005a;
+  color: rgb(165, 39, 39);
   background-color: white;
 
 }
@@ -274,4 +310,30 @@ body {
 canvas {
   width: 100% !important;
   height: 100% !important;
+}
+.janela{
+  background: url("../background\ grafico.jpg");
+  background-size: cover;
+  width: 100%;
+  /* display: flex; */
+  height: 100vh;
+  /* flex-direction: column;
+  justify-content: space-between; */
+/* align-items: center; */
+}
+
+
+
+.card2{
+  display: flex;
+  justify-content: space-around;
+}
+.titulo_card{
+width: 15%;
+}
+.subtitulo_card{
+width: 15%;
+}
+.texto_card{
+  width: 60%;
 }
