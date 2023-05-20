@@ -1,12 +1,80 @@
 W*{
     font-family: 'Segoe UI';
 }
-
-body {
+.pai{
     background: url(../background_1.jpg);
     background-size: cover;
     margin: 0px;
+    
+  
+}.banner2 {
+    width: 100%;
+    height: 600px;
+    /* background-color: rgba(0, 0, 0, 0.33); */
+    flex-direction: column;
+}
+
+.separadora{
+    width: auto;
+    height: 50px;
+    background-color: rgb(165, 39, 39);
+    flex-direction: column;
+    text-align: center;
+    margin:0px
+    
+    
+}
+.content2{
+    background: url(../background_2.jpg);
+    background-size: cover;
+  justify-content:center ;
+        
+
+} .textoContent2{
+    background-color: rgba(255, 255, 255, 0.555);
+    text-align: start;
+    width:100vh;
+    background-size:cover ;
+    font-size: 3vh;
+    float:left;
+    margin-top: 30px;
+    margin-left: 20px;
+    
+
+}
+.botaoCadastrar{
+    background-color: rgb(165, 39, 39);
+    text-align: center;
+    width:20vh;
+    background-size:cover ;
+    font-size: 3vh;
+    float:left;
+    margin-left: 50vh;
+    padding: 9px;
+    border-radius: 3vh;
+
+    
+}
+.botaoCadastrar{
+    animation: piscar 1s infinite;
+  }
+  @keyframes piscar {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    80% {
+      opacity: 1;
+    }
+  }
+body {
+    background-size: cover;
+    margin: 0px;
     margin-top:0px;
+    background-color: rgb(2, 1, 1);
+    margin-bottom:0px;
 }   
 
 .header {
@@ -14,6 +82,7 @@ body {
     background-color: rgb(165, 39, 39);
     /* border-bottom: 5px solid #0a0000; */
     height: 70px;
+    
 }
 
 .container {
