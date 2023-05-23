@@ -16,7 +16,7 @@ body {
 
 .dash-right .avisos {
   width: 100%;
-  /* border: 3px solid pink; */
+  /* border: 3px solid pink; */ 
   color: rgb(0, 0, 0);
   /* font-family: "Exo 2", sans-serif; */
 }
@@ -30,25 +30,25 @@ body {
 
 
 .dash-right .avisos .container .div-form {
-  width: 100%;
+  width: 90%;
 }
 
 .dash-right .avisos .container .div-form #form_postagem {
-  width: 100%;
+  width: 90%;
 }
 
 .dash-right .avisos .div-form label {
-  width: 100%;
+  width: 90%;
   
 }
 
 .dash-right .avisos .div-form input {
-  width: 100%;
+  width: 90%;
   border-radius: 5px rgb(165, 39, 39)
 }
 
 .dash-right .avisos .div-form textarea {
-  width: 100%;
+  width: 90%;
   border: 3px solid rgb(165, 39, 39);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -101,8 +101,9 @@ body {
 background-color: rgb(165, 39, 39);
   flex-direction: column;
   /* height: 100px; */
-  
+
 }
+
 
 .div-results .feed-container {
   /* color:rgb(165, 39, 39); */
