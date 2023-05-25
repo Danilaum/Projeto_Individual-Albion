@@ -53,8 +53,8 @@ const serial = async (
 
             if (HABILITAR_OPERACAO_INSERIR) {
                 await poolBancoDados.execute(
-                    'insert into medida (dht11_umidade,dht11_temperatura, momento, fk_aquario) values (?,?,now(),?',
-                    [dht11Umidade, dht11Temperatura, momento, fk_aquario]
+                    'insert into trigo (dht11_umidade,dht11_temperatura, momento, fk_fazenda) values (?,?,now(),?',
+                    [dht11Umidade, dht11Temperatura, momento, fk_fazenda]
             );
         }
 
