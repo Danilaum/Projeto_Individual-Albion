@@ -338,3 +338,7 @@ width: 15%;
 .texto_card{
   width: 60%;
 }
+.paidoQuiz{
+  width: auto;
+  background-color: #0707f8;
+}

@@ -52,11 +52,109 @@
             </div>
 
         </div>
-
-        <div>
-            teste para titulo
+        <div class="paidoQuiz">
+            <h1 class="tituloQuiz">Quiz sobre Albion</h1>
+            <div id="pergunta"></div>
+            <ul id="opcoes"></ul>
+            <button onclick="verificarResposta()">Verificar Resposta</button>
+            <div id="pontuacao"></div>
+            <div id="div_quiz"></div>
         </div>
+        <script>
+            var perguntas = [
+                {
+                    pergunta: "Qual desses itens possui habilidade de cura ?",
+                    opcoes: ["Cajado Sagrado", "Maça-Pesada", "Espada"],
+                    resposta: 0,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Quais desses itens é um dos item necessário para forjar besta-leve",
+                    opcoes: ["Madeira", "Pedra", "Placa de Ferro"],
+                    resposta: 0,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Qual a facção que possui a bandeira  com a cor branca ?",
+                    opcoes: ["Bridgwatch", "Fort Sterling", "Lymhurst"],
+                    resposta: 1,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Qual nivel de especialização é necessário para adquirir a habilidade Compressor de Ar",
+                    opcoes: ["35", "70", "90"],
+                    resposta: 1,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Quantos Jogadores são necessário para formar uma Blob nivél 1",
+                    opcoes: ["15", "20", "11"],
+                    resposta: 2,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Qual dessas funções é responsável por formar uma poll de monstros",
+                    opcoes: ["Healer", "Shadow-Caller", "Tanque"],
+                    resposta: 2,
+                    pontuacao: 10
+                },
+                {
+                    pergunta: "Você gostou do quiz ?",
+                    opcoes: ["Não", "SIM AMEEEI", "Não só que em outra opção"],
+                    resposta: 1,
+                    pontuacao: 10
+                },
+            ];
 
-      <script>
+            var perguntaAtual = 0;
+            var pontuacaoTotal = 0;
 
-      </script>
+            function exibirPergunta() {
+                var perguntaElement = document.getElementById("pergunta");
+                var opcoesElement = document.getElementById("opcoes");
+                var pergunta = perguntas[perguntaAtual];
+
+                perguntaElement.innerHTML = pergunta.pergunta;
+                opcoesElement.innerHTML = "";
+
+                for (var i = 0; i < pergunta.opcoes.length; i++) {
+                    var opcao = document.createElement("li");
+                    opcao.innerHTML = '<input type="radio" name="resposta" value="' + i + '"> ' + pergunta.opcoes[i];
+                    opcoesElement.appendChild(opcao);
+                }
+            }
+
+            function verificarResposta() {
+                var respostas = document.getElementsByName("resposta");
+                var respostaSelecionada = -1;
+
+                for (var i = 0; i < respostas.length; i++) {
+                    if (respostas[i].checked) {
+                        respostaSelecionada = parseInt(respostas[i].value);
+                        break;
+                    }
+                }
+
+                if (respostaSelecionada === perguntas[perguntaAtual].resposta) {
+                    pontuacaoTotal += perguntas[perguntaAtual].pontuacao;
+                } else {
+
+                }
+
+                perguntaAtual++;
+                if (perguntaAtual < perguntas.length) {
+                    exibirPergunta();
+                } else if (pontuacaoTotal >= 60) {
+                    div_quiz.innerHTML = "Uau, você esta acima da média seu conhecimento sobre albion é de outro mundo Pontuação total: " + pontuacaoTotal;
+                }
+                else if (pontuacaoTotal >30 && pontuacaoTotal <60) {
+                    div_quiz.innerHTML = "Realmente você é fã de Albion online ! Pontuação total: " + pontuacaoTotal;
+                }
+                else {
+                    div_quiz.innerHTML = "Bom você foi bem mas com toda certeza pode melhorar ! Pontuação total: " + pontuacaoTotal;
+                }
+            }
+
+
+            exibirPergunta();
+        </script>
