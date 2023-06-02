@@ -1,5 +1,4 @@
 /* pagina mural */
-
 *,
 body {
   /* font-family: "Exo 2", sans-serif;*/
@@ -8,6 +7,10 @@ body {
 .img_albion{
   width: 90px;
   
+}
+.href{
+  color: #000000;
+  text-decoration: none;
 }
 .label-captura {
   display: flex;
@@ -339,6 +342,46 @@ width: 15%;
   width: 60%;
 }
 .paidoQuiz{
-  width: auto;
-  background-color: #0707f8;
+  width: 100ch;
+  background-color: #ffffff;
+  height: 35ch;
+  display: flex;
+  justify-content: center;
+  direction: column;
+  flex-direction: column;
+  margin-left: 35ch;
+  margin-top: 10ch;
+}
+.tituloQuiz{
+color: rgb(0, 0, 0);
+align-content: center;
+justify-content: space-evenly;
+display: flex;
+font-size: xx-large;
+
+}
+.tituloQuiz:hover{
+  transform: scale(1.1);
+  transition: all 0.2 s;
+}
+.tituloQuizPergunta{
+  color: rgb(0, 0, 0);
+  align-content: center;
+  justify-content: space-evenly;
+  display: flex;
+  font-size: x-large;
+}
+.tituloQuizOpcoes{
+  color: rgb(0, 0, 0);
+  align-content: center;
+  justify-content: space-evenly;
+  display: flex;
+  font-size: large;
+}
+.tituloQuizDiv{
+  color: rgb(0, 0, 0);
+  align-content: center;
+  justify-content: space-evenly;
+  display: flex;
+  font-size:large;
 }
