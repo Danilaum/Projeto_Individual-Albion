@@ -63,7 +63,26 @@
     var retornoSemente = Number(input_retorno_de_sementes.value)
     var lucroBruto = Number(quantidadeTrigo * valorTrigo + (retornoSemente * valorSemente))
     var lucroLiquido = Number(lucroBruto - custoPlantação)
+    sessionStorage.setItem('LUCRO_LIQUIDO', lucroLiquido)
     div_resultado.innerHTML = `<h3>O seu custo de plantação é ${custoPlantação}, seu retorno de semente é ${retornoSemente}, tendo assim um lucro bruto de ${lucroBruto}, e um lucro liquido de ${lucroLiquido}</h3>`
+
+    fetch("/lucro/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                lucroServer: lucroLiquido
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
   }
 
 </script>
