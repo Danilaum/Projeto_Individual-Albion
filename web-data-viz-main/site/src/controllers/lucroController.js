@@ -3,7 +3,7 @@ var lucroModel = require("../models/lucroModel");
 var sessoes = [];
 
 function testar(req, res) {
-    console.log("ENTRAMOS NA usuarioController");
+    console.log("ENTRAMOS NA lucroController");
     res.json("ESTAMOS FUNCIONANDO!");
 }
 
