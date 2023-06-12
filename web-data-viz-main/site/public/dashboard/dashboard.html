@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../trigo.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Dashboards</title>
+    <title>Albion</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
@@ -36,21 +36,21 @@
 
             <div class="btn-nav-white">
                 <a href="./cards.html">
-                    <h3>Fazendas</h3>
+                    <h3 class="h3Grafico">Fazendas</h3>
                 </a>
             </div>
 
             <div class="btn-nav">
 
-                <h3>Gráficos</h3>
+                <h3 class="h3Fazenda">Gráficos</h3>
 
             </div>
 
             <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                <a class="href" href="./jogo.html">
+                    <h3>Jogo</h3>
                 </a>
-            </div>
+                </div>
 
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
@@ -61,13 +61,13 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1"> Fazenda 1</button>
+                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1"> Fazendas</button>
            
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
                     <h3 class="tituloGraficos">
-                        <span id="tituloAquario1">123</span>
+                        <span id="tituloAquario1">Registros de ultimos lucros</span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas1"></canvas>
@@ -104,7 +104,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "<span style='color:rgb(165, 39, 39)'>ÚltimOS dados obtidos apartir da Fazenda " + idAquario + "</span>"
+        tituloAquario.innerHTML = "<span style='color:rgb(165, 39, 39)'>ÚltimOS dados obtidos apartir da Fazenda </span>"
     }
 
     function exibirAquario(idAquario) {

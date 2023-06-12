@@ -1,5 +1,8 @@
 /* pagina mural */
-*,
+*{
+  text-decoration: none;
+}
+
 body {
   /* font-family: "Exo 2", sans-serif;*/
   margin: 0; 
@@ -208,7 +211,12 @@ background-color: rgb(165, 39, 39);
   align-items: center;
   color: white;
 }
-
+.h3Fazenda{
+  color: white;
+}
+.h3Grafico{
+  color: rgb(0, 0, 0);
+}
 .card {
   margin: 2%;
   width: 40%;
@@ -268,7 +276,7 @@ background-color: rgb(165, 39, 39);
 }
 
 .tituloGraficos {
-  color: rgb(216, 216, 216);
+  color: rgb(165, 39, 39);
   display: flex;
   justify-content: center;
   margin: auto;
@@ -343,8 +351,8 @@ width: 15%;
 }
 .paidoQuiz{
   width: 100ch;
-  background-color: #ffffff;
-  height: 35ch;
+  background-color: #ffffff6b;
+  height: 45ch;
   display: flex;
   justify-content: center;
   direction: column;
